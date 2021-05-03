@@ -2,7 +2,7 @@
 //  logic.c
 //  [SDL]Tic-tac-toe
 //
-//  Created by Lê Minh An on 27/12/2020.
+//  Created by Lê Minh An on 27/03/2020.
 //
 
 #include "logic.h"
@@ -23,8 +23,8 @@ int check_player_won(game_t *game, int player)
     int diag1_count = 0;
     int diag2_count = 0;
 
-    for (int i = 0; i < N; ++i) {
-        for (int j = 0; j < N; ++j) {
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
             if (game->board[i * N + j] == player) {
                 row_count++;
             }
@@ -99,7 +99,8 @@ void click_on_cell(game_t *game, int row, int column)
 {
     if (game->state == RUNNING_STATE) {
         player_turn(game, row, column);
-    } else {
+    }
+    else {
         reset_game(game);
     }
 }

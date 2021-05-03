@@ -2,7 +2,7 @@
 //  main.c
 //  [SDL]Tic-tac-toe
 //
-//  Created by Lê Minh An on 27/12/2020.
+//  Created by Lê Minh An on 27/03/2020.
 //
 #include <stdlib.h>
 #include <stdio.h>
@@ -20,7 +20,7 @@ int main(int argc, const char * argv[]) {
         return EXIT_FAILURE;
     }
     
-    SDL_Window *window = SDL_CreateWindow("Procedural", 100, 100, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+    SDL_Window *window = SDL_CreateWindow("Tic-tac-toe", 100, 100, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
     if(window == NULL){
         fprintf(stderr, "SDL_CreateWindow Error: %s\n", SDL_GetError());
         return EXIT_FAILURE;
@@ -54,9 +54,7 @@ int main(int argc, const char * argv[]) {
                     break;
                     
                 case SDL_MOUSEBUTTONDOWN:
-                    click_on_cell(&game,
-                                  e.button.y / CELL_HEIGHT,
-                                  e.button.x / CELL_WIDTH);
+                    click_on_cell(&game, e.button.y / CELL_HEIGHT, e.button.x / CELL_WIDTH);
                     break;
                 default:{}
             }

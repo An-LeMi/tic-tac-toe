@@ -2,7 +2,7 @@
 //  rendering.h
 //  [SDL]Tic-tac-toe
 //
-//  Created by Lê Minh An on 27/12/2020.
+//  Created by Lê Minh An on 27/03/2020.
 //
 
 
